@@ -1,0 +1,32 @@
+<mat-card class="example-card" *ngIf="movie">
+  <mat-card-header>
+      <mat-card-title>
+        {{movie.Title}} - <small>{{movie.Year}}</small>
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{movie.imdbRating}}
+      </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content text-center>
+      <img [src] = "movie.Poster" class="info-img">
+      <br>
+      <ul class="none">
+        <li>
+          Plot: {{movie.Plot}}
+        </li>
+        <mat-divider></mat-divider>
+        <li>
+          Director: {{movie.Director}}
+        </li>
+        <mat-divider></mat-divider>
+        <li>
+          Actors: {{movie.Actors}}
+        </li>
+      </ul>
+
+
+
+  </mat-card-content>
+
+</mat-card>
